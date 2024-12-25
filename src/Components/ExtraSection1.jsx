@@ -28,7 +28,7 @@ const ExtraSection1 = () => {
 
 <div className="card bg-base-100  shadow-xl">
         <figure>
-          <img className="w-full h-[220px]" src={bg1} alt="Shoes" />
+          <img className="w-full h-[220px] fit-screen" src={bg1} alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">Intrinsicly pontificate highly efficient testing </h2>

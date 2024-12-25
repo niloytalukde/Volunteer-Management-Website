@@ -13,6 +13,19 @@ const Register = () => {
     const photo =form.photo.value
     const password = form.password.value;
 
+    // password validition 
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/;
+    if (!passwordRegex.test(password)) {
+      toast.error("Password must be at least 6 characters, include one Uppercase letter, Lowercase letter and one number.")
+      return;
+    }
+    if (password.length < 6) {
+      toast.error("Password should be 6 characters or longer");
+      return;
+    }
+
+
+
     // Register User 
 createUser(email,password)
 .then(res=>{

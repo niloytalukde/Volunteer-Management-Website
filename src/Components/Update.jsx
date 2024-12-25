@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 
-import { useParams } from 'react-router-dom';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthContext';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import axios from 'axios';
 import toast from 'react-hot-toast';
 const Update = () => {
+  
 const [data,setData]=useState({})
 const [volunteers, setVolunteers] = useState([]);
     const [startDate, setStartDate] = useState(new Date());
@@ -31,9 +32,10 @@ try{
     const updateData ={category,deadline,description,location,thumbnail,title,volunteersNeeded
     }
     const {data}= await axios.put(`${import.meta.env.VITE_API_URL}/update/${id}`,updateData)
-    toast.success('SuccessFully Update ')
-    from.reset()
     toast.success("Update Post Successfully")
+    from.reset()
+   
+   
     
 }catch(err){
     console.log(err);

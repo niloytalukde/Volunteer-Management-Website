@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthContext";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const { login, loginWithGoogle } = useContext(AuthContext);
 const location =useLocation()
+const navigate =useNavigate()
   const handelSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -13,8 +15,21 @@ const location =useLocation()
     const password = form.password.value;
     login(email, password)
     .then(res=>{
-      console.log(location);
+      if(res.user){
+        toast.success('Successfully Login')
+      navigate(location?.state ? location.state : "/");
+      }
     })
+  };
+
+  const handleGoogleLogin = () => {
+    loginWithGoogle() 
+      .then(() => {
+        navigate(location?.state ? location.state : "/");
+        console.log(location);
+
+      })
+      .catch(() => {});
   };
 
   return (
@@ -53,7 +68,9 @@ const location =useLocation()
           <div>
             {/* Login With Google start here  */}
             <button
-              onClick={loginWithGoogle}
+              onClick={handleGoogleLogin
+                
+              }
               className="flex items-center justify-center mx-auto text-xl border p-3 rounded-md"
             >
               <span className="mr-5 text-yellow-400">

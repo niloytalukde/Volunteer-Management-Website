@@ -1,11 +1,12 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthContext";
 import toast from "react-hot-toast";
 
 const BeVolunteer = () => {
+  const navigate =useNavigate()
   const { id } = useParams();
   const { user } = useContext(AuthContext);
 
@@ -58,8 +59,8 @@ const BeVolunteer = () => {
         volunteer
       );
       toast.success("Request Successful");
-
-      console.log(data);
+navigate("/")
+      
     } catch (err) {
       console.log(err);
     }
