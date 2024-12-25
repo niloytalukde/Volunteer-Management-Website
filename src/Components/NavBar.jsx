@@ -29,7 +29,20 @@ const NavBar = () => {
             </li>
           )}
         </ul>
+{/* dark Theme start */}
 
+<input type="checkbox" value={"dark"} className="toggle" defaultChecked />
+
+
+
+
+
+
+
+
+
+
+{/* dark Theme End  */}
         {user && (
           <div className='dropdown dropdown-end z-50'>
             <div

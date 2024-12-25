@@ -16,10 +16,12 @@ const AddVolunter = () => {
     const category=form.category.value
     const location=form.location.value
     const volunteersNeeded=form.volunteersNeeded.value
+    const volunteersNeededNum=parseInt(volunteersNeeded)
     const deadline=startDate
     const organizerEmail=form.organizerEmail.value
     const organizerName=form.organizerName.value
-   const VolunteerData ={thumbnail,title,description,category,location,volunteersNeeded,deadline,organizerName,organizerEmail}
+    
+   const VolunteerData ={thumbnail,title,description,category,location,volunteersNeeded:volunteersNeededNum,deadline,organizerName,organizerEmail}
     
 try{
     const {data}= await axios.post(`${import.meta.env.VITE_API_URL}/volunteer`,VolunteerData)
@@ -35,7 +37,8 @@ try{
         className="max-w-xl mx-auto p-6 bg-white shadow-md rounded-lg space-y-4 mt-10"
         onSubmit={handleSubmit}
       >
-        <h2 className="text-2xl justify-center flex font-bold mb-4">Create volunteer need post page</h2>
+        <h2 className="text-2xl justify-center flex font-bold mb-4">Create Volunteer <span className="text-[#ff813e] ml-4">Need Post page</span>  </h2>
+         
         {/* mother div  */}
         <div className="flex gap-2 justify-between">
           {/* Thumbnail */}
@@ -188,7 +191,7 @@ try{
         <div>
           <button
             type="submit"
-            className="w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:ring focus:ring-blue-300"
+            className="w-full py-2 px-4 bg-[#ff813e] text-white font-semibold rounded-md focus:ring focus:ring-blue-300"
           >
             Add Post
           </button>

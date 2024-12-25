@@ -31,6 +31,7 @@ try{
     const updateData ={category,deadline,description,location,thumbnail,title,volunteersNeeded
     }
     const {data}= await axios.put(`${import.meta.env.VITE_API_URL}/update/${id}`,updateData)
+    toast.success('SuccessFully Update ')
     from.reset()
     toast.success("Update Post Successfully")
     
@@ -44,7 +45,7 @@ try{
                className="max-w-xl mx-auto p-6 bg-white shadow-md rounded-lg space-y-4 mt-10"
                onSubmit={handleSubmit}
              >
-               <h2 className="text-2xl justify-center flex font-bold mb-4">Create volunteer need post page</h2>
+               <h2 className="text-2xl justify-center flex font-bold mb-4">Update Volunteer <span className='text-[#FF813E] ml-4 '>Need Post Page</span></h2>
                {/* mother div  */}
                <div className="flex gap-2 justify-between">
                  {/* Thumbnail */}
@@ -204,7 +205,7 @@ try{
                <div>
                  <button
                    type="submit"
-                   className="w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:ring focus:ring-blue-300"
+                   className="w-full py-2 px-4  bg-[#ff813e] text-white font-semibold rounded-md  focus:ring focus:ring-blue-300"
                  >
                    Update Post
                  </button>

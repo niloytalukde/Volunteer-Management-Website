@@ -5,6 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+
+
+
+
+
+    
     extend: {
       backgroundImage: {
         'hero1': "url('./src/assets/banner1.jpg')",

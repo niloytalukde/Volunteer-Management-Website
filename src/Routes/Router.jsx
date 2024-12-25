@@ -8,11 +8,14 @@ import AddVolunter from "../Components/AddVolunter";
 import VolunteerDetiels from "../Components/VolunteerDetiels";
 import ManageMyPost from "../Pages/ManageMyPost";
 import Update from "../Components/Update";
+import BeVolunteer from "../Components/BeVolunteer";
+import Error from "../Components/Error";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout></MainLayout>,
+      errorElement:<Error></Error>,
       children:[
         {
           path:'/',
@@ -45,6 +48,10 @@ const router = createBrowserRouter([
         {
           path:'/update-data/:id',
           element:<Update></Update>
+        },
+        {
+          path:'/volunteer/:id',
+          element:<BeVolunteer></BeVolunteer>
         },
       ]
     },
