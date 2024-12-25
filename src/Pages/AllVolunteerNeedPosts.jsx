@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 const AllVolunteerNeedPosts = () => {
@@ -14,9 +15,12 @@ const AllVolunteerNeedPosts = () => {
     );
     setVolunteers(data);
   };
-  console.log(search);
+  
   return (
     <div className="">
+      <Helmet>
+        <title> Volgistis | AllVolunteer Need Posts </title>
+      </Helmet>
       <h1 className="flex justify-center mt-5 text-3xl font-bold">
         All Voluteer{" "}
         <span className="text-[#ff7f3a] ml-2"> Need Posts Page</span>

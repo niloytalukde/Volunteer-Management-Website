@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthContext";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { Helmet } from "react-helmet";
 const AddVolunter = () => {
 
     const [startDate, setStartDate] = useState(new Date());
@@ -33,6 +34,9 @@ try{
 
   return (
     <div className="">
+      <Helmet>
+        <title> Volgistis | Add Volunteer </title>
+      </Helmet>
       <form
         className="max-w-xl mx-auto p-6 bg-white shadow-md rounded-lg space-y-4 mt-10"
         onSubmit={handleSubmit}

@@ -1,17 +1,20 @@
 import { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthContext";
 
 const Login = () => {
   const { login, loginWithGoogle } = useContext(AuthContext);
-
+const location =useLocation()
   const handelSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    login(email, password);
+    login(email, password)
+    .then(res=>{
+      console.log(location);
+    })
   };
 
   return (

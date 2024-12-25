@@ -1,7 +1,8 @@
 import { Navigate, useLocation } from 'react-router-dom'
 import { useContext } from 'react'
-import { AuthContext } from '../providers/AuthProvider'
-import Loading from '../Components/Loading'
+import { AuthContext } from '../AuthProvider/AuthContext'
+
+
 
 
 const PrivateRoute = ({ children }) => {
@@ -9,7 +10,7 @@ const PrivateRoute = ({ children }) => {
 
   const location = useLocation()
 
-  if (loading) return <Loading></Loading>
+  if (loading) return 
   if (user) return children
   return <Navigate to='/login' state={location.pathname} />
 }

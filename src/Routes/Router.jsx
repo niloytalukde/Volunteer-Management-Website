@@ -10,6 +10,7 @@ import ManageMyPost from "../Pages/ManageMyPost";
 import Update from "../Components/Update";
 import BeVolunteer from "../Components/BeVolunteer";
 import Error from "../Components/Error";
+import PrivateRoute from "../Routes/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -35,11 +36,11 @@ const router = createBrowserRouter([
         },
         {
           path:'/addVolunteer',
-          element:<AddVolunter></AddVolunter>
+          element:<PrivateRoute><AddVolunter></AddVolunter></PrivateRoute>
         },
         {
           path:'/details/:id',
-          element:<VolunteerDetiels></VolunteerDetiels>
+          element:<PrivateRoute><VolunteerDetiels></VolunteerDetiels></PrivateRoute>
         },
         {
           path:'/myPost',
@@ -51,7 +52,7 @@ const router = createBrowserRouter([
         },
         {
           path:'/volunteer/:id',
-          element:<BeVolunteer></BeVolunteer>
+          element:<PrivateRoute><BeVolunteer></BeVolunteer></PrivateRoute> 
         },
       ]
     },

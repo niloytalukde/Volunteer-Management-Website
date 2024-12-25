@@ -9,6 +9,7 @@ import { ImCancelCircle } from "react-icons/im";
 import { LuTableOfContents } from "react-icons/lu";
 import { BsGrid3X3Gap, BsListNested } from "react-icons/bs";
 import { format } from "date-fns";
+import { Helmet } from "react-helmet";
 
 const ManageMyPost = () => {
   const [myData, setmyData] = useState([]);
@@ -112,6 +113,9 @@ const ManageMyPost = () => {
 
   return (
     <div className="">
+      <Helmet>
+        <title> Volgistis | Manage My Post </title>
+      </Helmet>
       <div className=" w-11/12 mx-auto mt-10">
         <div className="text-3xl justify-end flex">
           {toggle ? (
