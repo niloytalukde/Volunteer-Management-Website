@@ -4,10 +4,13 @@ import { AuthContext } from "../AuthProvider/AuthContext";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Helmet } from "react-helmet";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 const AddVolunter = () => {
 
     const [startDate, setStartDate] = useState(new Date());
     const {user}=useContext(AuthContext)
+    const navigate =useNavigate()
   const handleSubmit = async(e) => {
     e.preventDefault()
     const form =e.target
@@ -26,7 +29,9 @@ const AddVolunter = () => {
     
 try{
     const {data}= await axios.post(`${import.meta.env.VITE_API_URL}/volunteer`,VolunteerData)
-    console.log(data);
+    toast.success("Added Post Successfully")
+    form.reset()
+navigate('/')
 }catch(err){
     console.log(err);
 }

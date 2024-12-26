@@ -30,7 +30,7 @@ setVolunteers(data)
             <h1 className='flex justify-center text-3xl font-bold mt-10 '>Volunteer <span className='text-[#ff7f3a] ml-2'>Needs Now</span></h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-11/12 mx-auto mt-10'>
                 {
-                    volunteers.length>0 && volunteers.map(data=><VolunteerCard key={data._id} data={data}></VolunteerCard>)
+                  volunteers?.map(data=><VolunteerCard key={data._id} data={data}></VolunteerCard>)
                 }
 
                 

@@ -20,7 +20,7 @@ const ExtraSection1 = () => {
           <h2 className="card-title">Energistically empower value-added action items</h2>
           <p>Enthusiastically optimize cooperative innovation and timely value. Dynamically syndicate corporate applications before orthogonal e-tailers. </p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+            <button className="btn bg-[#ff7a34] text-white ">Explore More</button>
           </div>
         </div>
       </div>
@@ -34,7 +34,7 @@ const ExtraSection1 = () => {
           <h2 className="card-title">Intrinsicly pontificate highly efficient testing </h2>
           <p>Intrinsicly pontificate highly efficient testing procedures via granular collaboration and idea-sharing. Enthusiastically drive functionalized schemas </p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+            <button className="btn bg-[#ff7a34] text-white">Explore More</button>
           </div>
         </div>
       </div>
@@ -48,7 +48,7 @@ const ExtraSection1 = () => {
           <h2 className="card-title">First Bionic Wireless Under Water Fish Drone</h2>
           <p>Distinctively reconceptualize backward-compatible internal or "organic" sources whereas an expanded array of channels. Quickly mesh front-end.</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+            <button className="btn bg-[#ff7a34] text-white">Explore More</button>
           </div>
         </div>
       </div>

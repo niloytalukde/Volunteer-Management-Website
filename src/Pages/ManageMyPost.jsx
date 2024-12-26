@@ -24,7 +24,7 @@ const ManageMyPost = () => {
   }, [user]);
   const fetchAll = async () => {
     const { data } = await axios.get(
-      `${import.meta.env.VITE_API_URL}/user-data/${user?.email}`
+      `${import.meta.env.VITE_API_URL}/user-data/${user?.email}`,{withCredentials:true}
     );
 
     setVolunteer(data);
@@ -69,7 +69,7 @@ const ManageMyPost = () => {
   }, [user]);
   const myRequestData = async () => {
     const { data } = await axios.get(
-      `${import.meta.env.VITE_API_URL}/my-request-data/${user?.email}`
+      `${import.meta.env.VITE_API_URL}/my-request-data/${user?.email}`,{withCredentials:true}
     );
     {
       setmyData(data);
@@ -78,7 +78,7 @@ const ManageMyPost = () => {
 
   const handelDelete2 = async (id) => {
     const { data } = await axios.delete(
-      `${import.meta.env.VITE_API_URL}/delete-request/${id}`
+      `${import.meta.env.VITE_API_URL}/delete-request/${id}`,
     );
 
     myRequestData();
@@ -171,7 +171,7 @@ const ManageMyPost = () => {
                         <p>{data.organizerEmail}</p>
                       </td>
                       <td className="p-3">
-                        <p>{data.deadline}</p>
+                        {format(new Date(data.deadline), "P")}
                       </td>
                       <td className="p-3">
                         <p>{data.volunteersNeeded}</p>
