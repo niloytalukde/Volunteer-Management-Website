@@ -14,42 +14,36 @@ const ExtraSection1 = () => {
         {/* card-1  */}
         <div className="card bg-base-100  shadow-xl">
         <figure>
-          <img className="w-full h-[220px]" src={bg} alt="Shoes" />
+          <img className="w-full object-cover h-[220px]" src={bg} alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">Energistically empower value-added action items</h2>
           <p>Enthusiastically optimize cooperative innovation and timely value. Dynamically syndicate corporate applications before orthogonal e-tailers. </p>
-          <div className="card-actions justify-end">
-            <button className="btn bg-[#ff7a34] text-white ">Explore More</button>
-          </div>
+         
         </div>
       </div>
 {/* card-2  */}
 
 <div className="card bg-base-100  shadow-xl">
         <figure>
-          <img className="w-full h-[220px] fit-screen" src={bg1} alt="Shoes" />
+          <img className="w-full object-cover  h-[220px] fit-screen" src={bg1} alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">Intrinsicly pontificate highly efficient testing </h2>
           <p>Intrinsicly pontificate highly efficient testing procedures via granular collaboration and idea-sharing. Enthusiastically drive functionalized schemas </p>
-          <div className="card-actions justify-end">
-            <button className="btn bg-[#ff7a34] text-white">Explore More</button>
-          </div>
+          
         </div>
       </div>
 
 {/* card 3 */}
       <div className="card bg-base-100  shadow-xl">
         <figure>
-          <img className="w-full h-[220px]" src={bg2} alt="Shoes" />
+          <img className="w-full object-cover h-[220px]" src={bg2} alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">First Bionic Wireless Under Water Fish Drone</h2>
           <p>Distinctively reconceptualize backward-compatible internal or "organic" sources whereas an expanded array of channels. Quickly mesh front-end.</p>
-          <div className="card-actions justify-end">
-            <button className="btn bg-[#ff7a34] text-white">Explore More</button>
-          </div>
+          
         </div>
       </div>
 

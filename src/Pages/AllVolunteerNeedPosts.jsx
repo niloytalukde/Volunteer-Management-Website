@@ -17,11 +17,11 @@ const AllVolunteerNeedPosts = () => {
   };
   
   return (
-    <div className="">
+    <div className=" py-20 ">
       <Helmet>
         <title> Volgistis | AllVolunteer Need Posts </title>
       </Helmet>
-      <h1 className="flex justify-center mt-5 text-3xl font-bold">
+      <h1 className="flex justify-center  text-3xl font-bold">
         All Voluteer{" "}
         <span className="text-[#ff7f3a] ml-2"> Need Posts Page</span>
       </h1>

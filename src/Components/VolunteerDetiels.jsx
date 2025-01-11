@@ -42,8 +42,8 @@ navigate(`/volunteer/${id}`)
   }
  
   return (
-    <div className="h-[calc(100vh-290px)] mt-10 w-10/12 mx-auto ">
-      <div className="card card-side bg-base-100 shadow-xl  ">
+    <div className="h-[calc(100vh-290px)] py-10  w-10/12 mx-auto ">
+      <div className="card card-side bg-base-100 mt-10 shadow-xl  ">
         <figure>
           <img className="h-96" src={thumbnail} alt="Movie" />
         </figure>

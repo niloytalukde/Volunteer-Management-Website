@@ -24,7 +24,8 @@ const ManageMyPost = () => {
   }, [user]);
   const fetchAll = async () => {
     const { data } = await axios.get(
-      `${import.meta.env.VITE_API_URL}/user-data/${user?.email}`,{withCredentials:true}
+      `${import.meta.env.VITE_API_URL}/user-data/${user?.email}`,
+      { withCredentials: true }
     );
 
     setVolunteer(data);
@@ -69,7 +70,8 @@ const ManageMyPost = () => {
   }, [user]);
   const myRequestData = async () => {
     const { data } = await axios.get(
-      `${import.meta.env.VITE_API_URL}/my-request-data/${user?.email}`,{withCredentials:true}
+      `${import.meta.env.VITE_API_URL}/my-request-data/${user?.email}`,
+      { withCredentials: true }
     );
     {
       setmyData(data);
@@ -78,7 +80,7 @@ const ManageMyPost = () => {
 
   const handelDelete2 = async (id) => {
     const { data } = await axios.delete(
-      `${import.meta.env.VITE_API_URL}/delete-request/${id}`,
+      `${import.meta.env.VITE_API_URL}/delete-request/${id}`
     );
 
     myRequestData();
@@ -116,7 +118,7 @@ const ManageMyPost = () => {
       <Helmet>
         <title> Volgistis | Manage My Post </title>
       </Helmet>
-      <div className=" w-11/12 mx-auto mt-10">
+      <div className=" w-11/12 mx-auto py-5">
         <div className="text-3xl justify-end flex">
           {toggle ? (
             <button onClick={toggleEvant} className="">

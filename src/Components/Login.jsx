@@ -26,7 +26,7 @@ const navigate =useNavigate()
     loginWithGoogle() 
       .then(() => {
         navigate(location?.state ? location.state : "/");
-        console.log(location);
+       
 
       })
       .catch(() => {});
